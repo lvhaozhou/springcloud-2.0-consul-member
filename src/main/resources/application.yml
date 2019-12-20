@@ -1,0 +1,17 @@
+##服务端口号
+server:
+  port: 8501
+###服务的别名---服务到注册中心的名称
+spring:
+  application:
+    name: consul-member
+  cloud:
+    ####注册到服务地址
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        ###服务ip地址
+        hostname: 127.0.0.1
+###默认情况下注册服务中心给的地址， 随机生成的应为pc-abc:
+###不同注册中心调用方法是不变的 变化的只是配置文件和地址 和maven 依赖信息
